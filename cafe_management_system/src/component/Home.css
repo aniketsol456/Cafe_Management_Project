@@ -1,0 +1,23 @@
+.home-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+}
+.greetings{
+    flex:1;
+    padding-right: 15px;
+    background-image: url(../assets/images/15.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.dish-photo{
+    flex: 1;
+    text-align: space-between;
+}
+.dish-photo img{
+    background-color: black;
+    padding-right: 15px;
+    max-width: 100%;
+    max-height: 250px;
+}
