@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Home.css';
 import rice from "../assets/images/4.jpeg";
 
 const Home = () => {
