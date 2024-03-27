@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import search_logo from '../assets/images/search_2.png'
+import search_logo from '../assets/images/search_2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import rice from "../assets/images/4.jpeg";
 
-const Home = () => {
+const Home = () => {  
   return (
     <div className="home-container">
         <div className="greetings">
