@@ -31,13 +31,13 @@ const Navbar = () => {
 
         <div className={navClassname}>
           <ul>
-            <li>Home</li>
-            <li>Menu</li>
+            <a href='Home'><li>Home</li></a>
+            <a><li>Menu</li></a>
             <li>Gallery</li>
             <li>Chef</li>
             <li>Blog</li>
             <li>About us</li>
-            <li>Signup/Login</li>  
+            <a href='Signup'><li>Signup/Login</li></a>
         </ul>
         </div>
 

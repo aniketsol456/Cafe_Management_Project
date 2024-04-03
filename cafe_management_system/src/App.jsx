@@ -6,7 +6,7 @@ import Signup from './component/Signup';
 const App = () => {
   return (
     <div className='container'>
-       <Navbar/>
+      <Navbar/>
       {/* <Home/> */}
       <Signup/>
     </div>
