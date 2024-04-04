@@ -7,6 +7,7 @@ import "../component/Signup.css";
 const Signup = () => {
 
   const[action,setAction] = useState("Sign Up");
+  const[visible,setVisible] = useState("Password");
 
   return (
     <div className="containe">
