@@ -33,10 +33,10 @@ const Navbar = () => {
           <ul>
             <a href='Home'><li>Home</li></a>
             <a><li>Menu</li></a>
-            <li>Gallery</li>
-            <li>Chef</li>
-            <li>Blog</li>
-            <li>About us</li>
+            <a><li>Gallery</li></a>
+            <a><li>Chef</li></a>
+            <a><li>Blog</li></a>
+            <a><li>About us</li></a>
             <a href='Signup'><li>Signup/Login</li></a>
         </ul>
         </div>
