@@ -6,7 +6,7 @@
   background: #fff;
   padding: 15px 7%;
 }
-.navitems ul li{
+.navitems ul a{
   flex: 1;
   list-style: none;
   text-align: center;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 1120px) {
-  .navitems ul li{
+  .navitems ul a{
     display:  none;
     
   }
@@ -73,7 +73,7 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 
 }
-  .navitems.responsive ul li{
+  .navitems.responsive ul a{
       display: block;
       text-align: center;
       margin: 10px;

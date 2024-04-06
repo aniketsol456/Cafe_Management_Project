@@ -3,6 +3,7 @@ import './Navbar.css';
 import search_logo from '../assets/images/search_2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const [navClassname,setNavclassname] = useState('navitems');
@@ -31,13 +32,13 @@ const Navbar = () => {
 
         <div className={navClassname}>
           <ul>
-            <a href='Home'><li>Home</li></a>
-            <a><li>Menu</li></a>
-            <a><li>Gallery</li></a>
-            <a><li>Chef</li></a>
-            <a><li>Blog</li></a>
-            <a><li>About us</li></a>
-            <a href='Signup'><li>Signup/Login</li></a>
+            <Link to="/"> Home </Link>
+            <Link to="/menu"> Menu </Link>
+            <Link to="/galery"> Gallery </Link>
+            <Link to="/chef"> Chef </Link>
+            <Link to="/blog"> Blog </Link>
+            <Link to="/about"> About US </Link>
+            <Link to="/sign-up"> Signup/Login </Link>
         </ul>
         </div>
 
