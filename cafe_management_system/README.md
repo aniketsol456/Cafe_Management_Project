@@ -10,4 +10,4 @@ Functionalities of this Project:-
 5. Order Management , Processing and Tracking
 6. Menu Management
 
-GitHub Repository Link :- 
+GitHub Repository Link :- https://github.com/aniketsol456/cafe_management_project/tree/main/cafe_management_system
