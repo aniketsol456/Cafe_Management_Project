@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: azure;
+    background-color: #333;
     margin-top: 20px;
-    color: darkblue;
+    color: white;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -16,7 +16,7 @@
     justify-content: space-between;
     list-style-type: none;
     padding: 0;
-
+    margin-top: 20px;
 }
 .Items ul li{
     cursor: pointer;
