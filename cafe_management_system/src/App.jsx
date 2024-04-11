@@ -26,8 +26,7 @@ const App = () => {
         <Route exact path="/sign-up" element={ <Signup/>}/>
       
       </Routes>
-      <Menu/>
-      <Footer/>
+      
     </div>
     </>
     </BrowserRouter>
