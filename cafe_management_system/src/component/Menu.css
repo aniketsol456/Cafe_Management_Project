@@ -6,13 +6,17 @@
     margin-top: 20px;
     color: darkblue;
 }
+.Items ul{
+    display: flex;
+    justify-content: space-between;
+}
 
 .Items ul a{
     flex: 1;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     color: darkblue;
-    justify-content: space-between;
+    justify-content: space-evenly;
     cursor: pointer;
     margin-top: 20px;
 }

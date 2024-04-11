@@ -10,8 +10,8 @@ const Menu = () => {
           <a>All</a>
           <a>Pizza</a>
           <a>Sandwichs</a>
-          <a>Cold-drinks</a>
-          <a>Ice-creams</a>
+          <a>Colddrinks</a>
+          <a>Icecreams</a>
         </ul>
       </div>
       
