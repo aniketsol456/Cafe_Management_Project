@@ -13,7 +13,6 @@ const Home = () => {
             <img src={rice} alt=""/>
         </div>
     </div>
-  
 
     )
 }
