@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './Chef.css';
 
 const Chef = () => {
   return (
-    <div>
-      <h1>Chef Page</h1>
+    <div className='Chef'>
+      <h1>Our Chef</h1>
     </div>
   )
 }

@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './Gallery.css';
 
 const Gallery = () => {
   return (
-    <div>
-      <h1> Gallery Page</h1>
+    <div className='Gallery'>
+      <h1>**Memories**</h1>
     </div>
   )
 }
