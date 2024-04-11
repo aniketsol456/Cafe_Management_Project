@@ -7,11 +7,11 @@ const Menu = () => {
       <div className="title"><h1>------------Menu------------</h1>
       <div className="Items">
         <ul>
-          <a>All</a>
-          <a>Pizza</a>
-          <a>Sandwichs</a>
-          <a>Colddrinks</a>
-          <a>Icecreams</a>
+          <li>All</li>
+          <li>Pizza</li>
+          <li>Sandwichs</li>
+          <li>Colddrinks</li>
+          <li>Icecreams</li>
         </ul>
       </div>
       

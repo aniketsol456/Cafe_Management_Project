@@ -5,22 +5,19 @@
     background-color: azure;
     margin-top: 20px;
     color: darkblue;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
-.Items{
+.Items ul{
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    list-style-type: none;
+    padding: 0;
 
 }
-
-.Items a{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    color: darkblue;
-    justify-content: space-evenly;
+.Items ul li{
     cursor: pointer;
-    margin-top: 20px;
 }
