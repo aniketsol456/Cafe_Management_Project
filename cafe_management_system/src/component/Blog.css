@@ -1,0 +1,8 @@
+.Blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    margin-top: 20px;
+    color: darkblue;
+}

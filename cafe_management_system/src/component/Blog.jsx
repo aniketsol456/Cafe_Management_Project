@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./Blog.css"
 
 const Blog = () => {
   return (
-    <div>
+    <div className='Blog'>
       <h1>Blog Page</h1>
     </div>
   )
