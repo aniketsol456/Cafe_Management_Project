@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: white;
     margin-top: 20px;
-    color: white;
+    color: rgb(238, 122, 45);
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 10px;

@@ -3,8 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background:  rgb(110, 252, 171);
+  background:  rgb(238, 122, 45);
   padding: 15px 7%;
+  color: #fff;
 }
 .navitems ul a{
   flex: 1;
@@ -16,8 +17,8 @@
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  color: #242424;
-  
+  color: #fff;
+  text-decoration: none;
 }
 
 .searchBox{

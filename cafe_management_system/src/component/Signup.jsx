@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import User_icon from "../assets/images/user_icon.png"
-import Mail_icon from "../assets/images/mail_icon.png"
+import Phone_icon from "../assets/images/phone_icon.png"
 import Pass_icon from "../assets/images/password_icon.png"
 import "../component/Signup.css";
 
@@ -21,8 +21,8 @@ const Signup = () => {
           <input type="text" placeholder='Name'/>
         </div>}
         <div className="input">
-          <img src={Mail_icon} alt=""/>
-          <input type="text" placeholder="EMail Id"/>
+          <img src={Phone_icon} alt=""/>
+          <input type="text" placeholder="Phone no."/>
         </div>
         <div className="input">
           <img src={Pass_icon} alt=""/>

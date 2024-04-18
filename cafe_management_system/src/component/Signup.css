@@ -7,7 +7,8 @@
     padding-bottom: 30px;
     margin-top: 110px;
     align-items: center;
-    margin-bottom: 30px;
+    justify-content: center;
+    /* margin-bottom: 30px; */
 }
 
 .header{
@@ -20,7 +21,7 @@
 }
 
 .text{
-    color: black;
+    color: rgb(238, 122, 45);
     font-size: 48px;
     font-weight: 700;
 }
@@ -28,7 +29,7 @@
 .underline{
     width: 61px;
     height: 6px;
-    background: black;
+    background: rgb(238, 122, 45);
     border-radius: 9px;
 }
 
@@ -49,6 +50,7 @@
     border-radius: 6px;
 }
 .input img{
+    border-radius: 50px;
     margin: 0px 30px;
     height: 25px;
     width: 25px;
@@ -69,7 +71,7 @@
     font-size: 18px;
 }
 .forgo-pass span{
-    color: purple;
+    color: rgb(238, 122, 45);
     cursor: pointer;
 }
 .submit{
@@ -84,7 +86,7 @@
     width: 220px;
     height: 60px;
     color: #fff;
-    background: purple;
+    background: rgb(238, 122, 45);
     border-radius: 50px;
     font-size: 20px;
     font-weight: 700;
