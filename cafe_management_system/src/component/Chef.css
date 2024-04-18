@@ -1,8 +1,21 @@
-.Chef{
-    display: flex;
+.header h1 {
     align-items: center;
-    justify-content: center;
-    background-color: azure;
     margin-top: 20px;
-    color: darkblue;
+    background-color: white;
+    color: rgb(238, 122, 45);
+}
+
+.Chef {
+    background-color: rgb(238, 122, 45);
+    display: inline-flex;
+}
+
+.Photos {
+    padding: 25px;
+    display: inline-flex;
+    gap: 38px; /* Add the unit (px) for the gap */
+}
+.photo img{
+    width: 300px;
+    height: 350px;
 }
