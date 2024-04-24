@@ -3,6 +3,7 @@ import './Home.css';
 import rice from "../assets/images/4.jpeg";
 import Menu from './Menu';
 import Footer from './Footer';
+import Chef from './Chef';
 
 const Home = () => {  
   return (
@@ -16,7 +17,9 @@ const Home = () => {
           </div>
       </div>
       <Menu />
+      <Chef/>
       <Footer />
+     
       </>
     )
 }

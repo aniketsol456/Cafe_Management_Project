@@ -12,7 +12,7 @@ import Chef5 from '../assets/images/chef5.jpg';
 const Chef = () => {
   return (
     <>
-    <div className="header"><h1>Our Chef</h1></div>
+    <div className="header"><h1>---------Our Chef---------</h1></div>
     <div className='Chef'>
       
       <div className="Photos">
@@ -32,7 +32,8 @@ const Chef = () => {
           <img src= {Chef5} alt = ''/>
         </div>
       </div>
-    </div><Footer /></>
+    </div>
+    </>
   )
 }
 
