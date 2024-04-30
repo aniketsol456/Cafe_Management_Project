@@ -21,3 +21,63 @@
 .Items ul li{
     cursor: pointer;
 }
+/* Button styling */
+.Menu .menu-item button {
+    background-color: rgb(238, 122, 45); /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .Menu .menu-item button:hover {
+    background-color: rgb(238, 122, 45); /* Darker shade of green when hovered */
+    transform: scale(1.05); /* Slightly increase size when hovered */
+  }
+  
+  /* Additional styling for responsiveness and alignment */
+  .Menu .item-container {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .Menu .menu-item {
+    flex: 0 1 220px; /* Flex basis of 220px with wrapping */
+    margin: 10px;
+    box-shadow: rgb(238, 122, 45); /* subtle shadow for 3D effect */
+    padding: 10px;
+    text-align: center; /* Center align text */
+    background: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners for the card */
+  }
+  
+  .Menu .menu-item img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 8px; /* Rounded top-left corner */
+    border-top-right-radius: 8px; /* Rounded top-right corner */
+  }
+  
+  /* Styling for the list of categories */
+  .Menu .Items ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+  }
+  
+  .Menu .Items li {
+    display: inline-block; /* Display items inline */
+    margin-right: 10px; /* Margin between items */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 8px; /* Padding around text */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f0f0f0; /* Light grey background */
+  }
+  
+  .Menu .Items li:hover {
+    background-color: #ddd; /* Darker shade on hover */
+  }
+  
