@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import search_logo from '../assets/images/search_2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+// import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
 const Navbar = () => {
@@ -46,7 +47,7 @@ const Navbar = () => {
             <input type="text" placeholder='Search'/>
             <img src={search_logo} alt=""/>
         </div>
-        
+        <FontAwesomeIcon icon={faShoppingCart} />
         <div className="barIcon" onClick={togglemenu}>
           <FontAwesomeIcon icon={faBars}/>
         </div>
