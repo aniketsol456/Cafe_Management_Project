@@ -15,7 +15,23 @@
     display: inline-flex;
     gap: 38px; /* Add the unit (px) for the gap */
 }
-.photo img{
+
+.photo {
+    position: relative;
+}
+
+.photo img {
     width: 342px;
     height: 350px;
+}
+
+.chef-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
