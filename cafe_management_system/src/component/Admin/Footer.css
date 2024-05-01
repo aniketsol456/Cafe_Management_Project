@@ -1,0 +1,33 @@
+.footer {
+    background-color: #fff;
+    color: rgb(238, 122, 45);
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cafe-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+  }
+  
+  .footer-links a {
+    color: rgb(238, 122, 45);
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
