@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Chef.css';
 import Footer from './Footer';
-import Chef1 from '../assets/images/chef1.jpeg';
+import Chef1 from '../assets/images/chef1.jpg';
 import Chef2 from '../assets/images/chef2.jpg';
 import Chef3 from '../assets/images/chef3.jpg';
 import Chef4 from '../assets/images/chef4.jpg';

@@ -11,9 +11,15 @@
 }
 
 .Photos {
+    margin-top: 20px;
     padding: 25px;
     display: inline-flex;
     gap: 38px; /* Add the unit (px) for the gap */
+    align-items: center;
+    justify-content: center;
+    width: 2050px;
+    height: 750px;
+
 }
 
 .photo {
@@ -21,8 +27,8 @@
 }
 
 .photo img {
-    width: 342px;
-    height: 350px;
+    width: 1000px;
+    height: 700px;
 }
 
 .chef-name {
