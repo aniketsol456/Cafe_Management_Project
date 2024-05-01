@@ -1,7 +1,7 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import './Order.css';
-import Footer from './Footer';
+import Sidebar from '../Admin/Sidebar';
+import '../Admin/Order.css';
+import Footer from '../Admin/Footer';
 
 const Order = () => {
     return (

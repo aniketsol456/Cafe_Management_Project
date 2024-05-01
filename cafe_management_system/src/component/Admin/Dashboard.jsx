@@ -1,7 +1,7 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import './Dashboard.css';
-import Footer from './Footer';
+import Sidebar from '../Admin/Sidebar';
+import '../Admin/Dashboard.css';
+import Footer from '../Admin/Footer';
 
 const Dashboard = () => {
   return (

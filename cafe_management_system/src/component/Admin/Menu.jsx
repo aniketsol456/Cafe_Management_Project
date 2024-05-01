@@ -1,7 +1,7 @@
 import React from 'react'
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-import './Menu.css';
+import Sidebar from '../Admin/Sidebar';
+import Footer from '../Admin/Footer';
+import '../Admin/Menu.css';
 
 const Menu = () => {
     return (
