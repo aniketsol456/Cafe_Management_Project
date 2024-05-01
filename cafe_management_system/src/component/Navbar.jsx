@@ -3,7 +3,7 @@ import './Navbar.css';
 import search_logo from '../assets/images/search_2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 const Navbar = ({ cart, setCart }) => {
   const navigate = useNavigate(); // Initialize navigate function
