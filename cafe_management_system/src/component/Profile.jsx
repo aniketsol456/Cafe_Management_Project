@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import crypto from 'crypto';
+// import crypto from 'crypto';
 import './Profile.css';
 
 const Profile = () => {
@@ -13,11 +13,11 @@ const Profile = () => {
 
   const [encryptedPassword, setEncryptedPassword] = useState('');
 
-  useEffect(() => {
-    const hash = crypto.createHash('sha256');
-    hash.update(userData.password);
-    setEncryptedPassword(hash.digest('hex'));
-  }, [userData.password]);
+  // useEffect(() => {
+  //   const hash = crypto.createHash('sha256');
+  //   hash.update(userData.password);
+  //   setEncryptedPassword(hash.digest('hex'));
+  // }, [userData.password]);
 
 
   return (
