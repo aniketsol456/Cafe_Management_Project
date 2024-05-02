@@ -8,4 +8,6 @@
     max-width: 275px;
     margin: 5px 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
   }
