@@ -7,7 +7,7 @@ import Menu from './component/Menu';
 import Gallery from './component/Gallery';
 import Chef from './component/Chef';
 import AboutUs from './component/AboutUs';
-import Blog from './component/Blog';
+import Feedback from './component/Feedback';
 import Cart from './component/Cart';
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
         <Route exact path="/gallery" element={ <Gallery/>}/>
         <Route exact path="/chef" element={ <Chef/>}/>
         <Route exact path="/about" element={ <AboutUs/>}/>
-        <Route exact path="/blog" element={ <Blog/>}/>
+        <Route exact path="/feedback" element={ <Feedback/>}/>
         <Route exact path="/sign-up" element={ <Signup/>}/>
         <Route exact path="/carts" element={<Cart/>}/>
       </Routes>
