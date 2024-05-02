@@ -9,6 +9,7 @@ import Chef from './component/Chef';
 import AboutUs from './component/AboutUs';
 import Feedback from './component/Feedback';
 import Cart from './component/Cart';
+import Profile from './component/Profile';
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
         <Route exact path="/about" element={ <AboutUs/>}/>
         <Route exact path="/feedback" element={ <Feedback/>}/>
         <Route exact path="/sign-up" element={ <Signup/>}/>
-        <Route exact path="/carts" element={<Cart/>}/>
+        <Route exact path="/cart" element={<Cart/>}/>
+        <Route exact path='/profile' element={<Profile/>}/>
       </Routes>
     </div>
     </>
