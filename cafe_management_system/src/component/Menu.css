@@ -81,3 +81,21 @@
     background-color: #ddd; /* Darker shade on hover */
   }
   
+.view-cart-button {
+  margin-top: 35px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(238, 122, 45);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-cart-button:hover {
+  background-color: #e6a25b;
+}
+
+  

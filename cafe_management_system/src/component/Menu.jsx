@@ -5,6 +5,7 @@ import Burger from '../assets/images/1.jpeg';
 import Masalasandwich from '../assets/images/9.jpeg';
 import coolbar from '../assets/images/11.jpeg';
 import Vanilla from '../assets/images/12.jpeg';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -53,9 +54,12 @@ const Menu = () => {
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
             <p>Rs.{item.price}</p>
-            <button onClick={() => addToCart(item)}>Add to Cart</button>
+            <button onClick={() => addToCart(item)}>Add to Cart</button> 
           </div>
         ))}
+      </div>
+      <div>
+                <Link to="/cart"><button className="view-cart-button">View Cart</button></Link>
       </div>
     </div>
   );
