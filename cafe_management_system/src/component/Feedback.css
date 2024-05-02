@@ -1,0 +1,8 @@
+.feedback{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 20px;
+    color: rgb(238, 122, 45)
+}

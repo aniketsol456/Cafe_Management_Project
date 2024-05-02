@@ -31,7 +31,7 @@ const Navbar = ({ cart, setCart }) => {
             <a href="/menu"> Menu </a>
             <a href="/gallery"> Gallery </a>
             <a href="/chef"> Chef </a>
-            <a href="/blog"> Blog </a>
+            <a href="/feedback"> Feedback/Review </a>
             <a href="/about"> About US </a>
             <a href="/sign-up"> Signup/Login </a>
           </ul>
