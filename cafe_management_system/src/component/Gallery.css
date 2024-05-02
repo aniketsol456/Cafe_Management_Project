@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: azure;
+    background-color: #fff;
     margin-top: 20px;
-    color: darkblue;
+    color: rgb(238, 122, 45);
 }
