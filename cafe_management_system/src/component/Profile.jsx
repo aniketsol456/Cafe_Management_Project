@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import crypto from 'crypto';
-import './Profile.css'
+import './Profile.css';
 
 const Profile = () => {
   // Simulate user data
