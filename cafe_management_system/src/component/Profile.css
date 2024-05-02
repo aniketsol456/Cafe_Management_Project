@@ -1,0 +1,11 @@
+.profile {
+    background-color: white;
+    color: rgb(238, 122, 45);
+    padding: 20px; 
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
