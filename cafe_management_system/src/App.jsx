@@ -10,6 +10,12 @@ import AboutUs from './component/AboutUs';
 import Feedback from './component/Feedback';
 import Cart from './component/Cart';
 import Profile from './component/Profile';
+import Dashboard from './component/Admin/Dashboard';
+import Sidebar from './component/Admin/Sidebar';
+import manu from './component/Admin/Menumanage';
+import Order from './component/Admin/Order';
+import Customer from './component/Admin/Customer';
+import Menumanage from './component/Admin/Menumanage';
 
 const App = () => {
   return (
@@ -27,6 +33,10 @@ const App = () => {
         <Route exact path="/sign-up" element={ <Signup/>}/>
         <Route exact path="/cart" element={<Cart/>}/>
         <Route exact path='/profile' element={<Profile/>}/>
+        {/* <Route exact path = '/' element={<Dashboard/>}/>
+        <Route exact path = '/orders' element={<Order/>}/>
+        <Route exact path = '/customers' element={<Customer/>}/>
+        <Route exact path = '/manu' element={<Menumanage/>}/> */}
       </Routes>
     </div>
     </>
