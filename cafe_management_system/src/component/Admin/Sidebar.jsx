@@ -37,7 +37,7 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/menus" activeClassName="active">
+          <NavLink to="/manu" activeClassName="active">
             Menu Management
           </NavLink>
         </li>
