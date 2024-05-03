@@ -16,15 +16,16 @@ import manu from './component/Admin/Menumanage';
 import Order from './component/Admin/Order';
 import Customer from './component/Admin/Customer';
 import Menumanage from './component/Admin/Menumanage';
+import Feedbackfromuser from './component/Admin/Feedbackfromuser';
 
 const App = () => {
   return (
     <BrowserRouter>
     <>
     <div className='container'>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
-        <Route exact path="/" element={ <Home/>}/>
+        {/* <Route exact path="/" element={ <Home/>}/>
         <Route exact path="/menu" element={ <Menu/>}/>
         <Route exact path="/gallery" element={ <Gallery/>}/>
         <Route exact path="/chef" element={ <Chef/>}/>
@@ -32,11 +33,12 @@ const App = () => {
         <Route exact path="/feedback" element={ <Feedback/>}/>
         <Route exact path="/sign-up" element={ <Signup/>}/>
         <Route exact path="/cart" element={<Cart/>}/>
-        <Route exact path='/profile' element={<Profile/>}/>
-        {/* <Route exact path = '/' element={<Dashboard/>}/>
+        <Route exact path='/profile' element={<Profile/>}/> */}
+        <Route exact path = '/' element={<Dashboard/>}/>
         <Route exact path = '/orders' element={<Order/>}/>
         <Route exact path = '/customers' element={<Customer/>}/>
-        <Route exact path = '/manu' element={<Menumanage/>}/> */}
+        <Route exact path = '/manu' element={<Menumanage/>}/>
+        <Route exact path= '/feedbackfromuser'element={<Feedbackfromuser/>}/>
       </Routes>
     </div>
     </>
