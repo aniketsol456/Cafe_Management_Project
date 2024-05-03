@@ -8,7 +8,6 @@
     margin-top: 110px;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 30px; */
 }
 
 .header{
@@ -57,13 +56,14 @@
 }
 .input input{
     height: 50px;
-    width: 400px;
+    width: 330px;
     background: transparent;
     border:none;
     outline: none;
     color: #797979;
     font-size: 20px;
 }
+
 .forgo-pass{
     padding-left: 65px;
     margin-top: 30px;
@@ -74,25 +74,52 @@
     color: rgb(238, 122, 45);
     cursor: pointer;
 }
+
 .submit{
     display: flex;
     gap: 30px;
     margin: 60px auto;
 }
-.sub{
+
+.submit1{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit1 button[type="submit"]{
+    background-color: rgb(238, 122, 45);
+    border-radius: 50px;
+}
+
+.sub, .sub1{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 220px;
     height: 60px;
     color: #fff;
-    background: rgb(238, 122, 45);
+    background: rgb(238, 122, 45); /* Changed the background color here for all buttons */
     border-radius: 50px;
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
 }
+
 .gray{
     background: #eaeaea;
     color: #676766;
+}
+
+.error-messages{
+    margin-top: 10px;
+    color: red; /* Error message color */
+    font-size: 16px;
+}
+
+.error{
+    margin: 5px 0; /* spacing between error messages */
+    color: #d32f2f; /* Red color for errors to make them stand out */
 }
