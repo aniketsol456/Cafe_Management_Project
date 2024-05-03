@@ -1,40 +1,84 @@
 .menumanage {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .sidebar {
-    width: 250px;
-    background-color: rgb(238, 122, 45);
-    color: #fff;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    padding: 15px;
-    cursor: pointer;
-  }
-  
-  .sidebar li:hover {
-    background-color: #635c5a;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows items to wrap as needed */
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  /* flex: 1 1 150px; Sidebar takes at least 200px space */
+  width: 150px;
+}
+
+.main-content {
+  flex: 3 1 450px; /* Main content area is larger */
+  padding: 20px;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.menu-form {
+  margin-top: 25px;
+  width: 500px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  /* width: 100%; Full width on smaller screens */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .menumanage {
       flex-direction: column;
-    }
-  
-    .sidebar {
-      width: 100%;
-    }
   }
-  
+
+  .sidebar,
+  .main-content {
+      flex: 1 0 100%; /* Each takes full width on small screens */
+  }
+
+  .menu-form {
+      padding: 10px; /* Smaller padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="file"],
+  button[type="submit"] {
+      padding: 12px; /* Larger touch targets on very small screens */
+  }
+}
