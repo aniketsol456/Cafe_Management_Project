@@ -19,6 +19,7 @@ import Menumanage from './component/Admin/Menumanage';
 import Feedbackfromuser from './component/Admin/Feedbackfromuser';
 
 const App = () => {
+
   return (
     <BrowserRouter>
     <>
@@ -34,11 +35,11 @@ const App = () => {
         <Route exact path="/sign-up" element={ <Signup/>}/>
         <Route exact path="/cart" element={<Cart/>}/>
         <Route exact path='/profile' element={<Profile/>}/>
-        {/* <Route exact path = '/' element={<Dashboard/>}/>
+        <Route exact path = '/admin' element={<Dashboard/>}/>
         <Route exact path = '/orders' element={<Order/>}/>
         <Route exact path = '/customers' element={<Customer/>}/>
         <Route exact path = '/manu' element={<Menumanage/>}/>
-        <Route exact path= '/feedbackfromuser'element={<Feedbackfromuser/>}/> */}
+        <Route exact path= '/feedbackfromuser'element={<Feedbackfromuser/>}/>
       </Routes>
     </div>
     </>

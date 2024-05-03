@@ -16,8 +16,8 @@ const Cart = ({ cart, setCart }) => {
     <div className="cart-page">
       <h1>Your Cart</h1>
       <ul>
-        {cart?.map((item, index) => (
-          <li key={index}>
+        {cart.map((item) => (
+          <li key={item.id}>
             {item.name} - Rs.{item.price} x {item.qty}
             <button onClick={() => increaseQty(item.id)}>+</button>
             <button onClick={() => decreaseQty(item.id)} disabled={item.qty === 1}>-</button>

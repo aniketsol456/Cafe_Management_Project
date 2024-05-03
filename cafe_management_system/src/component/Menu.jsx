@@ -58,7 +58,7 @@ const Menu = ({ cart, setCart }) => {  // Ensure cart and setCart are passed as 
         ))}
       </div>
       <div>
-        <Link to="/cart"><button className="view-cart-button">View Cart</button></Link>
+        <Link to="/Cart"><button className="view-cart-button">View Cart</button></Link>
       </div>
     </div>
   );

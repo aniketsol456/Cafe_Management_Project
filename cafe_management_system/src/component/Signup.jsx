@@ -108,10 +108,10 @@ const Signup = () => {
             console.log("No matching user found");
           } else {
             console.log("User logged in successfully");
-            if (phone !== "9054214277" && password !== "@Aniket_007") {
-              navigate("/");
+            if (phone === "9054214277" && password === "@Aniket_007") {
+              navigate("/admin");
             } else if (phone !== "" && password !== "") {
-              navigate("/home");
+              navigate("/");
             }
           }
         } catch (error) {
