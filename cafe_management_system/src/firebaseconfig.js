@@ -13,9 +13,11 @@ const firebaseConfig = {
   storageBucket: "cafemanage-8e5e9.appspot.com",
   messagingSenderId: "483134537905",
   appId: "1:483134537905:web:6ed40011e64425e862e290",
-  measurementId: "G-VXDKESYRXY"
+  measurementId: "G-VXDKESYRXY",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+export default app;
