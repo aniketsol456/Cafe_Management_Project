@@ -12,6 +12,15 @@ const Menumanage = () => {
                     <h1>Menu Management</h1>
                     <form className="menu-form">
                         <div className="form-group">
+                            <label htmlFor="item_category">Item Category:</label>
+                            <select id="item_category" name="item_category">
+                                <option value="pizza">Pizza</option>
+                                <option value="sandwich">Sandwich</option>
+                                <option value="ice-creams">Ice-Creams</option>
+                                <option value="cold-drinks">Cold Drinks</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="item_name">Item Name:</label>
                             <input type="text" id="item_name" name="item_name" />
                         </div>

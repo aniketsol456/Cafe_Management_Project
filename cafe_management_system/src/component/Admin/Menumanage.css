@@ -6,6 +6,17 @@
   width: 100vw;
 }
 
+.menu-form .form-group select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
 .sidebar {
   /* flex: 1 1 150px; Sidebar takes at least 200px space */
   width: 150px;
@@ -46,7 +57,7 @@
 }
 
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: rgb(238, 122, 45);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -56,7 +67,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: rgb(223, 142, 87);
 }
 
 @media (max-width: 768px) {

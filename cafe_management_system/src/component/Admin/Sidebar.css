@@ -40,4 +40,27 @@
   .menu-list li:hover {
     background-color: #555;
   }
+  .logout-container {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .logout-button {
+    background-color: #fff; /* Red color for emphasis */
+    color: rgb(238, 122, 45);
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #eed743;
+    color: red;
+  }
   

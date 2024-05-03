@@ -20,12 +20,11 @@ const Cart = ({ cart, setCart }) => {
           <li key={index}>
             {item.name} - Rs.{item.price} x {item.qty}
             <button onClick={() => increaseQty(item.id)}>+</button>
-            <button onClick={() => decreaseQty(item.id)}>-</button>
+            <button onClick={() => decreaseQty(item.id)} disabled={item.qty === 1}>-</button>
           </li>
         ))}
       </ul>
     </div>
-
   );
 }
 
