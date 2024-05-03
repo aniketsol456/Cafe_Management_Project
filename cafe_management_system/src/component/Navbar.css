@@ -25,6 +25,8 @@
   align-items: center;
   background: #242424;
   padding: 10px 20px;
+  border: 0;
+  border-color: 0;
   border-radius: 50px;
 }
 .searchBox input {

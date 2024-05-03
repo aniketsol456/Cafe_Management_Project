@@ -1,8 +1,68 @@
-.feedback{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    margin-top: 20px;
-    color: rgb(238, 122, 45)
+.feedback-form {
+    max-width: 400px;
+    margin: 40px auto; /* Center form horizontally */
+    padding: 20px;
+    border: none; /* Remove border */
+    border-radius: 50px; /* Add border-radius of 50px to form */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Added to use Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Align children (form elements) in the center */
+}
+  
+.feedback-form h2 {
+    color: rgb(238, 122, 45);
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.form-group {
+    margin-bottom: 20px;
+    width: 100%; /* Ensure full width within the form */
+}
+  
+label {
+    font-weight: bold;
+    color: rgb(238, 122, 45);
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[tupe='name'],
+input[type='text'],
+input[type='email'],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px; /* Updated below for textarea */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    border-radius: 20px; /* Uniformly apply a border-radius of 50px */
+}
+  
+button[type="submit"] {
+    background-color: rgb(238, 122, 45); /* Changed background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px; /* Maintain smaller border-radius for button */
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Optional: Make button full-width for better mobile experience */
+}
+  
+button[type='submit']:hover {
+    background-color: #c96a31; /* Darken the color on hover */
+}
+  
+/* Optional: Styles for responsive design */
+@media (max-width: 600px) {
+    .feedback-form {
+      width: 90%; /* Adjust width for smaller screens */
+      margin: 40px auto; /* Center vertically and horizontally */
+    }
 }
