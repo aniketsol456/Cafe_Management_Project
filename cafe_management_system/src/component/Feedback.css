@@ -8,6 +8,7 @@
     display: flex; /* Added to use Flexbox */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Align children (form elements) in the center */
+    background-color: #ffefef; 
 }
   
 .feedback-form h2 {
