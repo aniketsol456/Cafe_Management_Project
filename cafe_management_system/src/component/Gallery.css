@@ -7,7 +7,8 @@
   }
   
   .gallery h1 {
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 30px;
     color: rgb(238, 122, 45);
     margin-bottom: 20px;
   }

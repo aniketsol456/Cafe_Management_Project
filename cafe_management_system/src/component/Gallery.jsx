@@ -32,7 +32,7 @@ const images = [
 const Gallery = () => {
   return (
     <div className="gallery">
-      <h1>Image Gallery</h1>
+      <h1>----------Gallery----------</h1>
       <div className="card-container">
         {images.map((image, index) => (
           <div key={index} className="card">
