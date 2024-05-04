@@ -16,30 +16,24 @@ const useCart = () => {
     }, []);
 
     const increaseQty = useCallback((id) => {
-        setCart(cart => cart.map(item =>
+        setCart(currentCart => currentCart.map(item =>
             item.id === id ? { ...item, qty: item.qty + 1 } : item
         ));
     }, []);
 
     const decreaseQty = useCallback((id) => {
-        setCart(cart => cart.map(item =>
-            item.id === id ? { ...item, qty: Math.max(item.qty - 1, 1) } : item
+        setCart(currentCart => currentCart.map(item =>
+            item.id === id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item
         ));
     }, []);
 
     const removeItem = useCallback((id) => {
-        setCart(cart => cart.filter(item => item.id !== id));
+        setCart(currentCart => currentCart.filter(item => item.id !== id));
     }, []);
 
-    const clearCart = useCallback(() => {
-        setCart([]);
-    }, []);
-
-    const submitOrder = useCallback(() => {
-        // Placeholder for order submission logic
-        console.log("Order submitted", cart);
-        clearCart();
-    }, [cart, clearCart]);
+    const getTotalPrice = useCallback(() => {
+        return cart.reduce((total, item) => total + item.price * item.qty, 0);
+    }, [cart]);
 
     return {
         cart,
@@ -47,8 +41,7 @@ const useCart = () => {
         increaseQty,
         decreaseQty,
         removeItem,
-        clearCart,
-        submitOrder
+        getTotalPrice,
     };
 };
 
