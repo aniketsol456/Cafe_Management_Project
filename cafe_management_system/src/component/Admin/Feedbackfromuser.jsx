@@ -9,7 +9,6 @@ const Feedbackfromuser = () => {
   const [feedbackList, setFeedbackList] = useState([]);
 
   useEffect(() => {
-    // Fetch feedback data from Firestore when the component mounts
     const fetchData = async () => {
       const db = getFirestore(app);
       const feedbackRef = collection(db, "user-feedbacks");
@@ -34,8 +33,8 @@ const Feedbackfromuser = () => {
             {feedbackList.map((feedback) => (
               <div key={feedback.id} className="feedback-item">
                 <h3>{feedback.name}</h3>
-                <p>Email: {feedback.email}</p>
-                <p>Feedback: {feedback.feedback}</p>
+                <p><strong>Email:</strong> {feedback.email}</p>
+                <p><strong>Feedback:</strong> {feedback.feedback}</p>
               </div>
             ))}
           </div>

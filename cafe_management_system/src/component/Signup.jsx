@@ -109,7 +109,7 @@ const Signup = () => {
           } else {
             console.log("User logged in successfully");
             if (phone === "9054214277" && password === "@Aniket_007") {
-              navigate("/admin");
+              navigate("/dashboard");
             } else if (phone !== "" && password !== "") {
               navigate("/");
             }
