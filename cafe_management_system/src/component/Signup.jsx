@@ -113,7 +113,7 @@ const Signup = () => {
             if (phone === "9054214277" && password === "@Aniket_007") {
               localStorage.setItem("phone", "9054214277");
               localStorage.setItem("name", "Aniket Solanki");
-              navigate("/");
+              navigate("/home");
             } else if (phone !== "" && password !== "") {
               let myName = "";
               let myPhone = "";
