@@ -3,7 +3,7 @@ import Sidebar from "../Admin/Sidebar";
 import Footer from "../Admin/Footer";
 import "../Admin/Customer.css";
 import app from "../../firebaseconfig";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
 const Customer = () => {
   const [customers, setCustomers] = useState([]);
@@ -14,13 +14,25 @@ const Customer = () => {
       const db = getFirestore(app);
       const usersCollection = collection(db, "users");
       const usersSnapshot = await getDocs(usersCollection);
-      const customersData = usersSnapshot.docs.map((doc) => doc.data());
+      const customersData = usersSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setCustomers(customersData);
       setLoading(false);
     };
 
     fetchCustomers();
   }, []);
+
+  const handleDeleteCustomer = async (customerId) => {
+    const db = getFirestore(app);
+    try {
+      await deleteDoc(doc(db, "users", customerId));
+      setCustomers(customers.filter(customer => customer.id !== customerId));
+      alert("Customer deleted successfully!");
+    } catch (error) {
+      console.error("Error removing customer: ", error);
+      alert("Failed to delete the customer.");
+    }
+  };
 
   return (
     <>
@@ -40,13 +52,17 @@ const Customer = () => {
                     <tr>
                       <th>Name</th>
                       <th>Phone Number</th>
+                      <th>Delete</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {customers.map((customer, index) => (
-                      <tr key={index}>
+                    {customers.map((customer) => (
+                      <tr key={customer.id}>
                         <td>{customer.name}</td>
                         <td>{customer.phone}</td>
+                        <td>
+                          <button onClick={() => handleDeleteCustomer(customer.id)}>Delete</button>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
