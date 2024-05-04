@@ -25,9 +25,7 @@ const Home = () => {
       <Menu cart={cart} setCart={setCart} />
       <Gallery/>
       <Chef/>
-      <Footer />
-      {/* <Cart cart={cart} setCart={setCart}/> */}
-     
+      <Footer />   
       </>
     )
 }
