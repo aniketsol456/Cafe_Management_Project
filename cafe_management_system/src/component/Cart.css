@@ -1,22 +1,79 @@
+/* Base Styles */
 .cart-page {
-    padding: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the cart area */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
+  max-width: 600px; /* Maximum width of the cart */
+  margin: 40px auto; /* Increased top and bottom margin for better visual separation */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+}
+
+.cart-page h1 {
+  color: #333;
+  text-align: center; /* Center-align the title */
+  font-size: 26px; /* Slightly larger font for emphasis */
+  margin-bottom: 30px; /* Increased bottom margin for visual hierarchy */
+  font-weight: 600; /* Semi-bold for better readability */
+}
+
+/* List Styles */
+.cart-page ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.cart-page li {
+  margin: 15px 0; /* Increased margin for better separation */
+  padding: 15px; /* Increased padding for more clickable area */
+  border-bottom: 2px solid #ccc; /* Thicker border for better definition */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s; /* Smoother transition for hover state */
+}
+
+.cart-page li:hover {
+  background-color: #f1f1f1; /* Subtle hover effect for interactivity */
+}
+
+/* Button Styles */
+.cart-page button {
+  padding: 8px 15px; /* More generous padding for easier interaction */
+  background-color: #0056b3; /* Consistent blue shade for all buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500; /* Medium font weight for clarity */
+  letter-spacing: 0.5px; /* Slight spacing to improve legibility */
+  transition: transform 0.2s, box-shadow 0.2s; /* Responsive transformations */
+}
+
+.cart-page button:hover {
+  transform: scale(1.05); /* Slight scale up for tactile feedback */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-page {
+      padding: 15px; /* Adjusted padding for consistency */
+      width: 95%; /* Full width on smaller screens */
   }
-  
+
   .cart-page h1 {
-    color: #333;
+      font-size: 22px; /* Adjusted font size for smaller screens */
   }
-  
-  .cart-page ul {
-    list-style-type: none;
-  }
-  
+
   .cart-page li {
-    margin: 10px 0;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: flex-start;
   }
-  
+
   .cart-page button {
-    margin-left: 10px;
+      width: 100%; /* Full-width buttons for easier mobile interaction */
+      margin-top: 10px; /* Space above buttons for clarity */
   }
-  
+}
