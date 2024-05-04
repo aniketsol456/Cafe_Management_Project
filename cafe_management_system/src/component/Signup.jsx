@@ -104,14 +104,27 @@ const Signup = () => {
             where("password", "==", password)
           );
           const querySnapshot = await getDocs(usersQuery);
+
           if (querySnapshot.empty) {
             console.log("No matching user found");
           } else {
             console.log("User logged in successfully");
+
             if (phone === "9054214277" && password === "@Aniket_007") {
-              navigate("/dashboard");
-            } else if (phone !== "" && password !== "") {
+              localStorage.setItem("phone", "9054214277");
+              localStorage.setItem("name", "Aniket Solanki");
               navigate("/");
+            } else if (phone !== "" && password !== "") {
+              let myName = "";
+              let myPhone = "";
+              querySnapshot.forEach((doc) => {
+                const data = doc.data();
+                myName = data.name;
+                myPhone = data.phone;
+              });
+              localStorage.setItem("phone", myPhone);
+              localStorage.setItem("name", myName);
+              navigate("/home");
             }
           }
         } catch (error) {
