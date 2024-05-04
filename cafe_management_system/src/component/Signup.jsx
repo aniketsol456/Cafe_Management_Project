@@ -84,19 +84,24 @@ const Signup = () => {
       const db = getFirestore(app);
       if (action === "Sign Up") {
         try {
-          await addDoc(collection(db, "users"), {
+          const docRef = await addDoc(collection(db, "users"), {
             name: name,
             phone: phone,
             password: password,
           });
-          console.log("Form is valid! User signed up successfully.");
+          console.log("Form is valid! User signed up successfully with doc ID:", docRef.id);
+          // Here you can use docRef.id as needed
+          localStorage.setItem("userId", docRef.id);
+          console.log(docRef.id);  // Example of storing the document ID in localStorage
           setName("");
-          setPassword("");
           setPhone("");
+          setPassword("");
+          navigate("/"); // Redirect to home after signup
         } catch (error) {
           console.error("Error signing up:", error);
         }
-      } else if (action === "Login") {
+      }
+       else if (action === "Login") {
         try {
           const usersQuery = query(
             collection(db, "users"),
@@ -124,7 +129,7 @@ const Signup = () => {
               });
               localStorage.setItem("phone", myPhone);
               localStorage.setItem("name", myName);
-              navigate("/home");
+              navigate("/");
             }
           }
         } catch (error) {
