@@ -50,6 +50,22 @@ th {
   background-color: #f2f2f2;
 }
 
+/* Styling for the Delete button in the customer list table */
+.customer-list button {
+  background-color: #e74c3c; /* red color for delete buttons */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.customer-list button:hover {
+  background-color: #c0392b; /* darker shade on hover */
+}
+
+
 @media (max-width: 768px) {
   .customer {
     flex-direction: column;
@@ -99,4 +115,5 @@ th {
     font-weight: bold;
     text-align: left;
   }
+
 }
