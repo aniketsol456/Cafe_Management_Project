@@ -6,36 +6,24 @@
   width: 100vw;
 }
 
-.menu-form .form-group select {
-  width: 100%;
-  padding: 8px;
-  margin: 10px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-
 .sidebar {
-  /* flex: 1 1 150px; Sidebar takes at least 200px space */
-  width: 150px;
+  width: 150px; /* Fixed width for sidebar */
 }
 
 .main-content {
-  flex: 3 1 450px; /* Main content area is larger */
+  flex-grow: 1; /* Takes the remaining space */
   padding: 20px;
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
 .menu-form {
   margin-top: 25px;
-  width: 500px;
   background: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
+  width: 100%; /* Ensures the form is responsive */
+  max-width: 500px; /* Maximum width of the form */
   box-sizing: border-box;
-  /* width: 100%; Full width on smaller screens */
 }
 
 .form-group {
@@ -49,11 +37,14 @@
 
 .form-group input[type="text"],
 .form-group input[type="number"],
-.form-group input[type="file"] {
+.form-group input[type="file"],
+.form-group select { /* Added select to the existing input styles */
   width: 100%;
   padding: 8px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
 }
 
 button[type="submit"] {
@@ -70,6 +61,35 @@ button[type="submit"]:hover {
   background-color: rgb(223, 142, 87);
 }
 
+/* CSS for Edit button */
+.item-container table button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-container table button:hover {
+  opacity: 0.8;
+}
+
+.item-container table td button {
+  margin-right: 5px;
+}
+
+/* Specific style for the Edit button */
+.item-container table td button.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Specific style for the Delete button */
+.item-container table td button.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+
 @media (max-width: 768px) {
   .menumanage {
       flex-direction: column;
@@ -77,7 +97,7 @@ button[type="submit"]:hover {
 
   .sidebar,
   .main-content {
-      flex: 1 0 100%; /* Each takes full width on small screens */
+      width: 100%; /* Full width on smaller screens */
   }
 
   .menu-form {
@@ -89,6 +109,7 @@ button[type="submit"]:hover {
   .form-group input[type="text"],
   .form-group input[type="number"],
   .form-group input[type="file"],
+  .form-group select,
   button[type="submit"] {
       padding: 12px; /* Larger touch targets on very small screens */
   }
