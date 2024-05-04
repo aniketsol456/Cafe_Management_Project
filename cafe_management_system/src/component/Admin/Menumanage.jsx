@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
@@ -12,6 +12,18 @@ const Menumanage = () => {
   const [itemPicture, setItemPicture] = useState(null);
   const [itemPrice, setItemPrice] = useState("");
   const [uploading, setUploading] = useState(false);
+  const [menuItems, setMenuItems] = useState([]);
+  const [editingItemId, setEditingItemId] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const db = getFirestore(app);
+      const menuRef = collection(db, "menu-items");
+      const querySnapshot = await getDocs(menuRef);
+      setMenuItems(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    };
+    fetchData();
+  }, []);
 
   const handleItemPictureChange = (e) => {
     if (e.target.files[0]) {
@@ -19,39 +31,62 @@ const Menumanage = () => {
     }
   };
 
+  const handleDelete = async (itemId) => {
+    const db = getFirestore(app);
+    try {
+      await deleteDoc(doc(db, "menu-items", itemId));
+      setMenuItems(menuItems.filter(item => item.id !== itemId));
+    } catch (error) {
+      console.error("Error deleting item:", error);
+    }
+  };
+
+  const handleEdit = (itemId) => {
+    const itemToEdit = menuItems.find(item => item.id === itemId);
+    if (itemToEdit) {
+      setItemCategory(itemToEdit.category);
+      setItemName(itemToEdit.name);
+      setItemPrice(itemToEdit.price);
+      setEditingItemId(itemId);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!itemPicture) {
-      console.error("Please select an item picture.");
-      return;
-    }
-
     const db = getFirestore(app);
     const storage = getStorage(app);
 
     try {
       setUploading(true);
+      let downloadURL;
 
-      const storageRef = ref(storage, `item_pictures/${itemPicture.name}`);
-      await uploadBytes(storageRef, itemPicture);
+      if (itemPicture) {
+        const storageRef = ref(storage, `item_pictures/${itemPicture.name}`);
+        await uploadBytes(storageRef, itemPicture);
+        downloadURL = await getDownloadURL(storageRef);
+      }
 
-      const downloadURL = await getDownloadURL(storageRef);
-
-      // Add item information to Firestore collection
-      await addDoc(collection(db, "menu-items"), {
+      const itemData = {
         category: itemCategory,
         name: itemName,
-        pictureURL: downloadURL,
         price: itemPrice,
-      });
+        pictureURL: downloadURL,
+      };
+
+      if (editingItemId) {
+        const itemRef = doc(db, "menu-items", editingItemId);
+        await updateDoc(itemRef, itemData);
+      } else {
+        await addDoc(collection(db, "menu-items"), itemData);
+      }
 
       setItemCategory("");
       setItemName("");
-      setItemPicture(null);
       setItemPrice("");
+      setItemPicture(null);
+      setEditingItemId(null);
     } catch (error) {
-      console.error("Error adding item:", error);
+      console.error("Error handling the item:", error);
     } finally {
       setUploading(false);
     }
@@ -110,9 +145,31 @@ const Menumanage = () => {
               />
             </div>
             <button type="submit" disabled={uploading}>
-              {uploading ? "Uploading..." : "Add Item"}
+              {uploading ? "Processing..." : editingItemId ? "Update Item" : "Add Item"}
             </button>
           </form>
+          <div className="item-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item Name</th>
+                  <th>Price</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {menuItems.map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.name}</td>
+                    <td>Rs.{item.price}</td>
+                    <td><button onClick={() => handleEdit(item.id)}>Edit</button></td>
+                    <td><button onClick={() => handleDelete(item.id)}>Delete</button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <Footer />
