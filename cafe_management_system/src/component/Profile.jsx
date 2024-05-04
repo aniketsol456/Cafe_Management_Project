@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 // import crypto from 'crypto';
+import { useNavigate } from "react-router-dom";
 import "./Profile.css";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const name = localStorage.getItem("name");
   const phone = localStorage.getItem("phone");
   // Simulate user data
@@ -21,6 +23,14 @@ const Profile = () => {
   //   setEncryptedPassword(hash.digest('hex'));
   // }, [userData.password]);
 
+  const handleLogout = () => {
+    // Clear the localStorage or any other user session data
+    localStorage.removeItem("name");
+    localStorage.removeItem("phone");
+    // Navigate to the signup page
+    navigate('/sign-up');  // Adjust the path as per your routing settings
+  };
+  
   return (
     <div className="profile">
       <h1>User Profile</h1>
@@ -37,6 +47,9 @@ const Profile = () => {
       <p>
         <strong>Order History Count:</strong> {userData.orders.length}
       </p>
+      <div className="logout">
+        <button onClick={handleLogout}>Logout</button>
+      </div>
     </div>
   );
 };
