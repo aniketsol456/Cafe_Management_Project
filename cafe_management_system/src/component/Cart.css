@@ -1,79 +1,79 @@
 /* Base Styles */
 .cart-page {
   padding: 20px;
-  background-color: #f9f9f9; /* Light background for the cart area */
-  border-radius: 10px; /* Rounded corners for a softer look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
-  max-width: 600px; /* Maximum width of the cart */
-  margin: 40px auto; /* Increased top and bottom margin for better visual separation */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cart-page h1 {
   color: #333;
-  text-align: center; /* Center-align the title */
-  font-size: 26px; /* Slightly larger font for emphasis */
-  margin-bottom: 30px; /* Increased bottom margin for visual hierarchy */
-  font-weight: 600; /* Semi-bold for better readability */
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 /* List Styles */
 .cart-page ul {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .cart-page li {
-  margin: 15px 0; /* Increased margin for better separation */
-  padding: 15px; /* Increased padding for more clickable area */
-  border-bottom: 2px solid #ccc; /* Thicker border for better definition */
+  margin: 15px 0;
+  padding: 15px;
+  border-bottom: 2px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background-color 0.2s; /* Smoother transition for hover state */
+  transition: background-color 0.2s;
 }
 
 .cart-page li:hover {
-  background-color: #f1f1f1; /* Subtle hover effect for interactivity */
+  background-color: #f1f1f1;
 }
 
 /* Button Styles */
 .cart-page button {
-  padding: 8px 15px; /* More generous padding for easier interaction */
-  background-color: #0056b3; /* Consistent blue shade for all buttons */
+  padding: 8px 15px;
+  background-color: #0056b3;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 500; /* Medium font weight for clarity */
-  letter-spacing: 0.5px; /* Slight spacing to improve legibility */
-  transition: transform 0.2s, box-shadow 0.2s; /* Responsive transformations */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .cart-page button:hover {
-  transform: scale(1.05); /* Slight scale up for tactile feedback */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth on hover */
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .cart-page {
-      padding: 15px; /* Adjusted padding for consistency */
-      width: 95%; /* Full width on smaller screens */
+    padding: 15px;
+    width: 95%;
   }
 
   .cart-page h1 {
-      font-size: 22px; /* Adjusted font size for smaller screens */
+    font-size: 22px;
   }
 
   .cart-page li {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .cart-page button {
-      width: 100%; /* Full-width buttons for easier mobile interaction */
-      margin-top: 10px; /* Space above buttons for clarity */
+    width: 100%;
+    margin-top: 10px;
   }
 }
