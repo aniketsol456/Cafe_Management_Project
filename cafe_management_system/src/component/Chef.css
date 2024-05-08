@@ -1,22 +1,25 @@
+/* Header Styles */
 .header h1 {
-    align-items: center;
     margin-top: 20px;
     background-color: white;
-    color: rgb(238, 122, 45);
+    color: #ee7a2d; /* Hexadecimal color for consistency */
     text-align: center; /* Ensures the title is centered */
 }
 
+/* Chef Component Styles */
 .Chef {
-    background-color: rgb(238, 122, 45);
-    display: flex; /* Changed to flex for better alignment and spacing control */
+    background-color: #ee7a2d; /* Consistent color notation */
+    display: flex;
     justify-content: center; /* Centers the content horizontally */
     padding: 10px; /* Adds padding around the content */
+    align-items: center; /* Vertically centers the items in the flex container */
 }
 
+/* Photo Gallery Styles */
 .Photos {
     margin-top: 20px;
     padding: 25px;
-    display: flex; /* Changed to flex for better control */
+    display: flex;
     gap: 38px;
     align-items: center;
     justify-content: center;
@@ -26,9 +29,9 @@
 
 .photo {
     position: relative;
-    flex: 1 1 300px; /* Allows flexibility and basis for flex items */
-    max-width: 1000px; /* Sets a maximum width for each photo */
-    margin: 10px; /* Adds margin around photos */
+    flex: 1 1 300px; /* Flexibility and basis for flex items */
+    max-width: 1000px; /* Maximum width for each photo */
+    margin: 10px;
 }
 
 .photo img {
@@ -39,40 +42,37 @@
 .chef-name {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%; /* Ensures the name covers the bottom part of the photo */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
     padding: 10px;
 }
 
+/* Responsive Design Adjustments */
 @media (max-width: 1024px) {
-    /* Styles for tablets and below */
     .Photos {
-        width: auto; /* Adjusts width */
-        height: auto; /* Adjusts height */
-        padding: 10px; /* Reduces padding */
+        padding: 10px; /* Reduced padding for smaller screens */
     }
-    
+
     .photo {
-        max-width: 500px; /* Reduces max-width for smaller devices */
+        max-width: 500px; /* Adjusts maximum width for tablet devices */
     }
 }
 
 @media (max-width: 600px) {
-    /* Styles for mobile devices */
     .Chef {
-        flex-direction: column; /* Stacks the content vertically */
-        width: 100%; /* Full width */
-        margin: 0; /* Removes margin */
+        flex-direction: column; /* Stacks content vertically on smaller screens */
+        width: 100%; /* Uses full width of the viewport */
+        padding: 5px; /* Adjust padding to fit smaller screens */
     }
-    
+
     .Photos {
-        flex-direction: column; /* Aligns photos in a single column */
+        flex-direction: column; /* Stacks photos vertically */
     }
-    
+
     .photo {
-        max-width: 100%; /* Allows the photo to fill the container */
+        max-width: 100%; /* Photos take full width of their container */
+        margin: 5px 0; /* Adjusts margin for a clean vertical stacking */
     }
 }
